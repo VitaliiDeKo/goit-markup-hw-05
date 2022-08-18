@@ -304,7 +304,7 @@ color: #2196F3;
   top: 0;
   left: 0;
   width: 100%;
-  height: 1024px; 
+  height: 100%; 
   background-color: rgba(0, 0, 0, 0.2);
   display: block;
 
@@ -321,7 +321,7 @@ color: #2196F3;
   background: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-
+  
   transform: translate(-50%, -50%) scale(1) rotate(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -577,8 +577,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: #212121;
   background: #F5F4FA;
   border-radius: 4px;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-
+  
   transition-property: background-color, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -605,6 +604,7 @@ justify-content: center;
 .button:focus{
   color: #FFFFFF;
   background: #2196F3;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /*Застилізував колір навколо 5 кнопок, фон*/
 .button-item{
@@ -614,6 +614,8 @@ justify-content: center;
 .projects-top{
 position: relative;
 overflow: hidden;
+display: block;
+object-fit: fill;
 }
 .projects-top-text{
   position: absolute;
@@ -629,7 +631,7 @@ overflow: hidden;
   background: rgba(33, 150, 243, 0.9);
   padding: 63px 24px;
 
-  transform: translateY(102%);
+  transform: translateY(100%);
   
   transition-property: transform;
   transition-duration: 250ms;
@@ -666,7 +668,7 @@ margin-bottom: 4px;
   display: block;
 }
 .projects-item{
-  
+  display: block;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -681,12 +683,18 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
 }
 /*Застилізував рамкою текст під фото*/
 .borders{
+  display: block;
   border-bottom: 1px solid #EEEEEE;
   border-left: 1px solid #EEEEEE;
   border-right: 1px solid #EEEEEE;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
+  }
+  img{
+    display: block;
+    max-width: 100%;
+    height: auto;
   }
 .clients{
   padding-top: 94px;
